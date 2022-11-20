@@ -1,0 +1,314 @@
+body {
+    margin: 0;
+    padding: 0;
+    // display: flex;
+    // justify-content: space-around;
+    background-color: rgb(237, 235, 235);
+}
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+aside {
+    background-color: #55d292;
+    height: 100vh;
+    width: 275px;
+    position: fixed;
+    top: 0;
+    padding: 40px 0px;
+    box-sizing: border-box;
+    text-align: center;
+
+    h1 {
+        margin: 0;
+        font-size: 38px;
+        color: rgba(4, 1, 5, 0.68);
+        font-weight: bolder;
+    }
+
+    button {
+        margin: 20px 0px 50px 0;
+        height: 48px;
+        width: 200px;
+        font-size: 18px;
+        font-weight: bold;
+        border: 1px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+
+        background-color: white;
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+
+    }
+
+}
+
+.book-log {
+    margin: 40px 0 40px 46px;
+    text-align: left;
+}
+
+.developer-details {
+    font-size: 20px;
+    line-height: 1.5;
+
+    a {
+        color: black;
+    }
+}
+
+main {
+    // background-color: white;
+    width: 80.9%;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    // padding-top: 130px;
+    padding: 55px 10px 0px 40px;
+}
+
+.card-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    background-color: white;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 330px;
+
+    box-sizing: border-box;
+
+    padding: 20px 25px;
+
+    margin-bottom: 50px;
+
+    margin-right: 40px;
+
+    h2 {
+        margin-top: 0px;
+        text-align: center;
+    }
+
+    p>span {
+        margin-right: 10px;
+        font-weight: bolder;
+        color: #ee4747;
+    }
+
+    p {
+        margin-left: 30px;
+    }
+
+    .toggle-swtich {
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+.card-btn {
+    text-align: center;
+    margin-top: 25px;
+
+    button {
+        height: 35px;
+        width: 100px;
+        background: #ee4747;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background: #E86E6E;
+        }
+    }
+}
+
+.form-wrapper {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+
+    overflow: hidden;
+
+}
+
+.book-details-form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px 70px;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    transition: 1s;
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        height: 40px;
+        width: 280px;
+        // margin: 20px;
+        padding-left: 15px;
+
+        &::placeholder {
+            font-size: 17px;
+        }
+
+        font-size: 17px;
+
+        border: 1px solid black;
+    }
+
+    input[type="number"] {
+        margin: 20px 0;
+    }
+
+    .reading-status {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        input[type="checkbox"] {
+            height: 18px;
+            width: 18px;
+        }
+    }
+
+    .form-btn {
+        text-align: center;
+        margin-top: 30px;
+
+        button {
+            height: 40px;
+            width: 180px;
+            border: none;
+            background-color: #28b16d;
+            color: white;
+            letter-spacing: 1.5px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #55d292;
+            }
+        }
+    }
+
+    .closing-btn {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: -45px;
+        margin-top: -10px;
+        margin-bottom: 15px;
+
+        button {
+            background-color: white;
+            font-size: 20px;
+            width: 35px;
+            border: 1px solid black;
+            padding: 5px 0;
+            cursor: pointer;
+            border-radius: 100%;
+
+
+            color: #ee4747;
+            // color: white;
+            border: none;
+        }
+    }
+
+    #book-title {
+        margin-bottom: 20px;
+    }
+
+}
+
+//Toogle Switch Code
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin: 0 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 2px;
+    bottom: 2.5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.display-msg {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-30%, -50%);
+    font-size: 50px;
+    // color: red;
+}

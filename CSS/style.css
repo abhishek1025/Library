@@ -1,0 +1,330 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #edebeb;
+}
+
+* {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+aside {
+  background-color: #55d292;
+  height: 100vh;
+  width: 275px;
+  position: fixed;
+  top: 0;
+  padding: 40px 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+}
+
+aside h1 {
+  margin: 0;
+  font-size: 38px;
+  color: rgba(4, 1, 5, 0.68);
+  font-weight: bolder;
+}
+
+aside button {
+  margin: 20px 0px 50px 0;
+  height: 48px;
+  width: 200px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: white;
+}
+
+aside button:hover {
+  background-color: black;
+  color: white;
+}
+
+.book-log {
+  margin: 40px 0 40px 46px;
+  text-align: left;
+}
+
+.developer-details {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.developer-details a {
+  color: black;
+}
+
+main {
+  width: 80.9%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  padding: 55px 10px 0px 40px;
+}
+
+.card-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.book-card {
+  background-color: white;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 330px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px 25px;
+  margin-bottom: 50px;
+  margin-right: 40px;
+}
+
+.book-card h2 {
+  margin-top: 0px;
+  text-align: center;
+}
+
+.book-card p > span {
+  margin-right: 10px;
+  font-weight: bolder;
+  color: #ee4747;
+}
+
+.book-card p {
+  margin-left: 30px;
+}
+
+.book-card .toggle-swtich {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card-btn {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.card-btn button {
+  height: 35px;
+  width: 100px;
+  background: #ee4747;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.card-btn button:hover {
+  background: #E86E6E;
+}
+
+.form-wrapper {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.book-details-form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px 70px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.book-details-form h2 {
+  margin-top: 0;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.book-details-form input[type="text"],
+.book-details-form input[type="number"] {
+  height: 40px;
+  width: 280px;
+  padding-left: 15px;
+  font-size: 17px;
+  border: 1px solid black;
+}
+
+.book-details-form input[type="text"]::-webkit-input-placeholder,
+.book-details-form input[type="number"]::-webkit-input-placeholder {
+  font-size: 17px;
+}
+
+.book-details-form input[type="text"]:-ms-input-placeholder,
+.book-details-form input[type="number"]:-ms-input-placeholder {
+  font-size: 17px;
+}
+
+.book-details-form input[type="text"]::-ms-input-placeholder,
+.book-details-form input[type="number"]::-ms-input-placeholder {
+  font-size: 17px;
+}
+
+.book-details-form input[type="text"]::placeholder,
+.book-details-form input[type="number"]::placeholder {
+  font-size: 17px;
+}
+
+.book-details-form input[type="number"] {
+  margin: 20px 0;
+}
+
+.book-details-form .reading-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.book-details-form .reading-status input[type="checkbox"] {
+  height: 18px;
+  width: 18px;
+}
+
+.book-details-form .form-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.book-details-form .form-btn button {
+  height: 40px;
+  width: 180px;
+  border: none;
+  background-color: #28b16d;
+  color: white;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.book-details-form .form-btn button:hover {
+  background-color: #55d292;
+}
+
+.book-details-form .closing-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: -45px;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+.book-details-form .closing-btn button {
+  background-color: white;
+  font-size: 20px;
+  width: 35px;
+  border: 1px solid black;
+  padding: 5px 0;
+  cursor: pointer;
+  border-radius: 100%;
+  color: #ee4747;
+  border: none;
+}
+
+.book-details-form #book-title {
+  margin-bottom: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin: 0 10px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 2px;
+  bottom: 2.5px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  -webkit-box-shadow: 0 0 1px #2196F3;
+          box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.display-msg {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-30%, -50%);
+          transform: translate(-30%, -50%);
+  font-size: 50px;
+}
+/*# sourceMappingURL=style.css.map */
