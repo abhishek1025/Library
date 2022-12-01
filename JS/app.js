@@ -24,17 +24,18 @@ const readBooksEL = document.querySelector('#readBooks')
 formWrapper.style.display = 'none'
 
 //Constructor to create the obj
-function book(title, author, totalPages, isRead) {
-    this.title = title;
-    this.author = author;
-    this.totalPages = totalPages;
-    this.isRead = isRead;
+class book {
+    constructor(title, author, totalPages, isRead) {
+        this.title = title;
+        this.author = author;
+        this.totalPages = totalPages;
+        this.isRead = isRead;
+    }
+    //Prototype to change the status
+    changeReadStatus() {
+        this.isRead ? this.isRead = false : this.isRead = true;
+    }
 }
-
-//Prototype to change the status
-book.prototype.changeReadStatus = function () {
-    this.isRead ? this.isRead = false : this.isRead = true;
-};
 
 //function to display the books
 function addBookToLibrary() {
